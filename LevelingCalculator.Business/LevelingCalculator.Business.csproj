@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Character.ClientHTTP" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LevelingCalculator.Repository\LevelingCalculator.Repository.csproj" />
     <ProjectReference Include="..\LevelingCalculator.Shared\LevelingCalculator.Shared.csproj" />
   </ItemGroup>

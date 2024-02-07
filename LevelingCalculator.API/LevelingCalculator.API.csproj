@@ -28,10 +28,4 @@
     <ProjectReference Include="..\LevelingCalculator.Repository\LevelingCalculator.Repository.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="Character.ClientHTTP">
-      <HintPath>..\..\Character\Character.ClientHTTP\bin\Debug\net8.0\Character.ClientHTTP.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
