@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelingCalculator.Repository", "LevelingCalculator.Repository\LevelingCalculator.Repository.csproj", "{D28D631B-771C-46DC-86F9-2F102C90862F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelingCalculator.Business", "LevelingCalculator.Business\LevelingCalculator.Business.csproj", "{821314EA-115A-40D5-8B02-C6579C99035E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelingCalculator.Shared", "LevelingCalculator.Shared\LevelingCalculator.Shared.csproj", "{01387A39-CE95-42D9-824A-41AD262781C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelingCalculator.ClientHTTP", "LevelingCalculator.ClientHTTP\LevelingCalculator.ClientHTTP.csproj", "{98303F2D-987B-4253-AEA6-FDCA7D15E399}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LevelingCalculator.API", "LevelingCalculator.API\LevelingCalculator.API.csproj", "{6AF39709-2070-4F2B-9000-7B969CEA2641}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Character.ClientHTTP", "..\Character\Character.ClientHTTP\Character.ClientHTTP.csproj", "{4F2415A7-E230-4E60-B64E-BB270398C8E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D28D631B-771C-46DC-86F9-2F102C90862F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28D631B-771C-46DC-86F9-2F102C90862F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28D631B-771C-46DC-86F9-2F102C90862F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28D631B-771C-46DC-86F9-2F102C90862F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{821314EA-115A-40D5-8B02-C6579C99035E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{821314EA-115A-40D5-8B02-C6579C99035E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{821314EA-115A-40D5-8B02-C6579C99035E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{821314EA-115A-40D5-8B02-C6579C99035E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01387A39-CE95-42D9-824A-41AD262781C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01387A39-CE95-42D9-824A-41AD262781C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01387A39-CE95-42D9-824A-41AD262781C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01387A39-CE95-42D9-824A-41AD262781C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98303F2D-987B-4253-AEA6-FDCA7D15E399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98303F2D-987B-4253-AEA6-FDCA7D15E399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98303F2D-987B-4253-AEA6-FDCA7D15E399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98303F2D-987B-4253-AEA6-FDCA7D15E399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF39709-2070-4F2B-9000-7B969CEA2641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF39709-2070-4F2B-9000-7B969CEA2641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF39709-2070-4F2B-9000-7B969CEA2641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF39709-2070-4F2B-9000-7B969CEA2641}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2415A7-E230-4E60-B64E-BB270398C8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2415A7-E230-4E60-B64E-BB270398C8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2415A7-E230-4E60-B64E-BB270398C8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2415A7-E230-4E60-B64E-BB270398C8E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA5C9FD3-E72F-48AA-91A5-D4A94669EFEA}
+	EndGlobalSection
+EndGlobal
