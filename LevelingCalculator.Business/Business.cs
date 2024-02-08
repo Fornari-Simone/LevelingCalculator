@@ -43,7 +43,7 @@ namespace LevelingCalculator.Business
         // LETTURA
         public async Task<CharacterDTO?> GetCharacter(int ID, CancellationToken cancellation = default)
         {
-            Character? character = await _repository.GetCharacter(ID, cancellation);
+            LevelingCalculator.Repository.Model.Character? character = await _repository.GetCharacter(ID, cancellation);
             if (character == null) return null;
             return new CharacterDTO
             {

@@ -18,7 +18,7 @@ builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddHttpClient<Character.ClientHTTP.Abstraction.IClientHTTP, Character.ClientHTTP.ClientHTTP>("CharacterClientHTTP", httpClient =>
 {
     httpClient.BaseAddress = new Uri(builder.Configuration.GetSection("CharacterClientHTTP:BaseAddress").Value);
-})
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
