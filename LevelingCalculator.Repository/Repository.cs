@@ -67,5 +67,42 @@ namespace LevelingCalculator.Repository
         {
             _dbContext.CharRes.Remove(cr);
         }
+
+        public async Task UpdateCharacter(Character character, CancellationToken cancellation = default)
+        {
+            Character? character1 = await this.GetCharacter(character.ID, cancellation);
+            if (character1 != null)
+            {
+                character1.Nome = character.Nome;
+            }
+        }
+
+        public async Task UpdateResource(Resource resource, CancellationToken cancellation = default)
+        {
+            Resource? resource1 = await this.GetResource(resource.ID, cancellation);
+            if (resource1 != null)
+            {
+                resource1.Nome = resource.Nome;
+                resource1.Craftable = resource.Craftable;
+                resource1.Own = resource.Own;
+            }
+        }
+
+        public async Task UpdateCharRes(CharRes charRes, CancellationToken cancellation = default)
+        {
+            CharRes? charRes1 = await this.GetCharRes(charRes.ID, cancellation);
+            if (charRes1 != null)
+            {
+                charRes1.Elite = charRes.Elite;
+                charRes1.IDChar = charRes.IDChar;
+                charRes1.IDRes1 = charRes.IDRes1;
+                charRes1.IDRes2 = charRes.IDRes2;
+                charRes1.IDRes3 = charRes.IDRes3;
+                charRes1.ResN1 = charRes.ResN1;
+                charRes1.ResN2 = charRes.ResN2;
+                charRes1.ResN3 = charRes.ResN3;
+                charRes1.LMD = charRes.LMD;
+            }
+        }
     }
 }

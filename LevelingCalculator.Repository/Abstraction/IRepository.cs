@@ -19,5 +19,8 @@ namespace LevelingCalculator.Repository.Abstraction
         Task RemoveCharacter(Character car, CancellationToken cancellation = default);
         Task RemoveResource(Resource res, CancellationToken cancellation = default);
         Task RemoveCharRes(CharRes cr, CancellationToken cancellation = default);
+        Task UpdateCharacter(Character character, CancellationToken cancellation = default);
+        Task UpdateResource(Resource resource, CancellationToken cancellation = default);
+        Task UpdateCharRes(CharRes charRes, CancellationToken cancellation = default);
     }
 }

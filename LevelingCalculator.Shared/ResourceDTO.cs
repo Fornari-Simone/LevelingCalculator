@@ -10,5 +10,7 @@ namespace LevelingCalculator.Shared
     {
         public int ID { get; set; }
         public string? Nome { get; set; }
+        public int Craftable { get; set; } = 0;
+        public int Own { get; set; } = 0;
     }
 }

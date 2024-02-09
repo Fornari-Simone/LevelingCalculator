@@ -1,5 +1,8 @@
 using LevelingCalculator.Business;
 using LevelingCalculator.Business.Abstraction;
+using LevelingCalculator.Business.Kafka;
+using LevelingCalculator.Business.Kafka.MessageHandler.Factory;
+using LevelingCalculator.Business.Profiles;
 using LevelingCalculator.Repository;
 using LevelingCalculator.Repository.Abstraction;
 using LevelingCalculator.Repository.Model;
@@ -15,10 +18,17 @@ builder.Services.AddDbContext<LevelingCalculatorDbContext>(options =>
     a => a.MigrationsAssembly("LevelingCalculator.API")));
 builder.Services.AddScoped<IBusiness, Business>();
 builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddAutoMapper(typeof(AssemblyMarker));
+
 builder.Services.AddHttpClient<Character.ClientHTTP.Abstraction.IClientHTTP, Character.ClientHTTP.ClientHTTP>("CharacterClientHTTP", httpClient =>
 {
     httpClient.BaseAddress = new Uri(builder.Configuration.GetSection("CharacterClientHTTP:BaseAddress").Value);
 });
+builder.Services.AddHttpClient<Resource.ClientHTTP.Abstraction.IClientHTTP, Resource.ClientHTTP.ClientHTTP>("CharacterClientHTTP", httpClient =>
+{
+    httpClient.BaseAddress = new Uri(builder.Configuration.GetSection("ResourceClientHTTP:BaseAddress").Value);
+});
+builder.Services.AddKafkaConsumerService<KafkaTopicsInput, MessageHandlerFactory>(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

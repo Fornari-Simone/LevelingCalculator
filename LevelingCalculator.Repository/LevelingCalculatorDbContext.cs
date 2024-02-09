@@ -27,8 +27,6 @@ namespace LevelingCalculator.Repository
             modelBuilder.Entity<Resource>().HasMany(x => x.res_ass).WithOne(x => x.resource).HasForeignKey(x => x.IDRes3);
 
             // Auto-increment
-            modelBuilder.Entity<Character>().Property(x => x.ID).ValueGeneratedOnAdd();
-            modelBuilder.Entity<Resource>().Property(x => x.ID).ValueGeneratedOnAdd();
             modelBuilder.Entity<CharRes>().Property(x => x.ID).ValueGeneratedOnAdd();
         }
 

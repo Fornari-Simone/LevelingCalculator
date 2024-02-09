@@ -11,6 +11,7 @@ namespace LevelingCalculator.Repository.Model
     {
         public int ID { get; set; }
         public string? Nome { get; set; }
+        public int Stars { get; set; }
 
         public List<CharRes> char_ass { get; set; } = new List<CharRes>();
     }

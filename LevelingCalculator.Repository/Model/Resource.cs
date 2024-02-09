@@ -10,6 +10,8 @@ namespace LevelingCalculator.Repository.Model
     {
         public int ID { get; set; }
         public string? Nome { get; set; }
+        public int Craftable { get; set; } = 0;
+        public int Own { get; set; } = 0;
 
         public List<CharRes> res_ass { get; set; } = new List<CharRes>();
     }

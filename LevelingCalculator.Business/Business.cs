@@ -48,7 +48,8 @@ namespace LevelingCalculator.Business
             return new CharacterDTO
             {
                 ID = character.ID,
-                Nome = character.Nome
+                Nome = character.Nome,
+                Stars = character.Stars,
             };
         }
         public async Task<CharResDTO?> GetCharRes(int ID, CancellationToken cancellation = default)
@@ -71,12 +72,14 @@ namespace LevelingCalculator.Business
         }
         public async Task<ResourceDTO?> GetResource(int ID, CancellationToken cancellation = default)
         {
-            Resource? resource = await _repository.GetResource(ID, cancellation);
+            LevelingCalculator.Repository.Model.Resource? resource = await _repository.GetResource(ID, cancellation);
             if (resource == null) return null;
             return new ResourceDTO
             {
                 ID = resource.ID,
                 Nome = resource.Nome,
+                Craftable = resource.Craftable,
+                Own = resource.Own
             };
         }
         // RIMOZIONE
