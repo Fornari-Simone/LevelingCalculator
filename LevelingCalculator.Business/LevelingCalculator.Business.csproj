@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Character.ClientHTTP" Version="1.0.3" />
-    <PackageReference Include="Character.Shared" Version="1.0.3" />
-    <PackageReference Include="Resource.ClientHTTP" Version="1.0.6" />
-    <PackageReference Include="Resource.Shared" Version="1.0.6" />
+    <PackageReference Include="Character.ClientHTTP" Version="1.0.4" />
+    <PackageReference Include="Character.Shared" Version="1.0.4" />
+    <PackageReference Include="Resource.ClientHTTP" Version="1.0.7" />
+    <PackageReference Include="Resource.Shared" Version="1.0.7" />
     <PackageReference Include="Utility.Kafka" Version="1.0.3" />
   </ItemGroup>
 

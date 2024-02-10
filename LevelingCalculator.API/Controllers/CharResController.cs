@@ -45,5 +45,23 @@ namespace LevelingCalculator.API.Controllers
             await _business.RemoveCharRes(ID, cancellation);
             return Ok("DONE!!!");
         }
+        [HttpPatch(Name = "UpdateCharRes")]
+        public async Task<ActionResult> UpdateCharRes(CharResDTO charResDTO, CancellationToken cancellation = default)
+        {
+            await _business.UpdateCharRes(charResDTO, cancellation);
+            return Ok("Done!!");
+        }
+        [HttpPatch(Name = "Ascend")]
+        public async Task<ActionResult> Ascend(int charResID, CancellationToken cancellation = default)
+        {
+            await _business.Ascend(charResID, cancellation);
+            return Ok("Done!!!");
+        }
+        [HttpPatch(Name = "LevelUP")]
+        public async Task<ActionResult> LevelUp(int characterID, int actualLvl, CancellationToken cancellation = default)
+        {
+            await _business.LevelUP(characterID, actualLvl, cancellation);
+            return Ok("Done!!!");
+        }
     }
 }

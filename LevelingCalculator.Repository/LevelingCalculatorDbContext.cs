@@ -28,10 +28,14 @@ namespace LevelingCalculator.Repository
 
             // Auto-increment
             modelBuilder.Entity<CharRes>().Property(x => x.ID).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<TransactionalOutbox>().HasKey(e => new { e.ID });
+            modelBuilder.Entity<TransactionalOutbox>().Property(e => e.ID).ValueGeneratedOnAdd();
         }
 
         public DbSet<Resource> Resource { get; set; }
         public DbSet<Character> Character { get; set; }
         public DbSet<CharRes> CharRes { get; set; }
+        public DbSet<TransactionalOutbox> TransactionalOutboxes { get; set; }
     }
 }

@@ -14,6 +14,8 @@ namespace LevelingCalculator.Business.Abstraction
         Task<CharacterDTO?> GetCharacter(int ID, CancellationToken cancellation = default);
         Task<ResourceDTO?> GetResource(int ID, CancellationToken cancellation = default);
         Task<CharResDTO?> GetCharRes(int ID, CancellationToken cancellation = default);
-
+        Task UpdateCharRes(CharResDTO charResDTO, CancellationToken cancellation = default);
+        Task Ascend(int ID, CancellationToken cancellation = default);
+        Task LevelUP(int ID, int acturlLvl, CancellationToken cancellation = default);
     }
 }

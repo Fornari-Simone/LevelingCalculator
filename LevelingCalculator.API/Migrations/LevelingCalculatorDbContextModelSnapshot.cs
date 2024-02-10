@@ -16,7 +16,7 @@ namespace LevelingCalculator.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -76,6 +76,9 @@ namespace LevelingCalculator.API.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Stars")
+                        .HasColumnType("int");
+
                     b.HasKey("ID");
 
                     b.ToTable("Character");
@@ -89,12 +92,39 @@ namespace LevelingCalculator.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<int>("Craftable")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Own")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
                     b.ToTable("Resource");
+                });
+
+            modelBuilder.Entity("LevelingCalculator.Repository.Model.TransactionalOutbox", b =>
+                {
+                    b.Property<long>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("ID"));
+
+                    b.Property<string>("Messaggio")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tabella")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("TransactionalOutboxes");
                 });
 
             modelBuilder.Entity("LevelingCalculator.Repository.Model.CharRes", b =>

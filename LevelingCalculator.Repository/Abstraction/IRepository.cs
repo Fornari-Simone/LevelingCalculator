@@ -22,5 +22,14 @@ namespace LevelingCalculator.Repository.Abstraction
         Task UpdateCharacter(Character character, CancellationToken cancellation = default);
         Task UpdateResource(Resource resource, CancellationToken cancellation = default);
         Task UpdateCharRes(CharRes charRes, CancellationToken cancellation = default);
+
+        // TransactionalOutbox
+        IEnumerable<TransactionalOutbox> GetAllTransactionalOutbox();
+
+        TransactionalOutbox? GetTransactionalOutboxByKey(long id);
+
+        void DeleteTransactionalOutbox(long id);
+
+        void InsertTransactionalOutbox(TransactionalOutbox transactionalOutbox);
     }
 }

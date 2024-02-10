@@ -104,5 +104,28 @@ namespace LevelingCalculator.Repository
                 charRes1.LMD = charRes.LMD;
             }
         }
+
+       
+        public IEnumerable<TransactionalOutbox> GetAllTransactionalOutbox()
+        {
+            return _dbContext.TransactionalOutboxes.ToList();
+        }
+
+        public TransactionalOutbox? GetTransactionalOutboxByKey(long id)
+        {
+            return _dbContext.TransactionalOutboxes.FirstOrDefault(x => x.ID == id);
+        }
+
+        public void DeleteTransactionalOutbox(long id)
+        {
+            _dbContext.TransactionalOutboxes.Remove(
+                GetTransactionalOutboxByKey(id) ??
+                throw new ArgumentException($"TransactionalOutbox con id {id} non trovato", nameof(id)));
+        }
+
+        public void InsertTransactionalOutbox(TransactionalOutbox transactionalOutbox)
+        {
+            _dbContext.TransactionalOutboxes.Add(transactionalOutbox);
+        }
     }
 }
