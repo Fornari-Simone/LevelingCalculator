@@ -17,10 +17,12 @@ namespace LevelingCalculator.Business
         private readonly Character.ClientHTTP.Abstraction.IClientHTTP _characterHTTP;
         private readonly Resource.ClientHTTP.Abstraction.IClientHTTP _resourceHTTP;
         private readonly ILogger<Business> _logger;
-        public Business(IRepository repository, ILogger<Business> logger)
+        public Business(IRepository repository, ILogger<Business> logger, Character.ClientHTTP.Abstraction.IClientHTTP characterhttp, Resource.ClientHTTP.Abstraction.IClientHTTP resourcehttp)
         {
             _repository = repository;
             _logger = logger;
+            _characterHTTP = characterhttp;
+            _resourceHTTP = resourcehttp;
         }
 
         // AGGIUNTA
