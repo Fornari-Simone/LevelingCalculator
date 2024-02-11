@@ -37,7 +37,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: Resource.API/Dockerfile
+          file: LevelingCalculator.API/Dockerfile
           build-args: |
             "TOKEN=${{ secrets.TOKEN }}"
           push: true
