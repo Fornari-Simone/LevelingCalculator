@@ -48,10 +48,10 @@ namespace LevelingCalculator.Business
             CharResDTO? charRes = await GetCharRes(ID, cancellation);
             if (charRes != null) 
             {
-                _resourceHTTP.ModifyOwn(charRes.IDRes1, -charRes.ResN1, cancellation);
-                _resourceHTTP.ModifyOwn(charRes.IDRes2, -charRes.ResN2, cancellation);
-                _resourceHTTP.ModifyOwn(charRes.IDRes3, -charRes.ResN3, cancellation);
-                _characterHTTP.Ascend(charRes.IDChar, cancellation);
+                await _resourceHTTP.ModifyOwn(charRes.IDRes1, -charRes.ResN1, cancellation);
+                await _resourceHTTP.ModifyOwn(charRes.IDRes2, -charRes.ResN2, cancellation);
+                await _resourceHTTP.ModifyOwn(charRes.IDRes3, -charRes.ResN3, cancellation);
+                await _characterHTTP.Ascend(charRes.IDChar, cancellation);
             }
 
         }

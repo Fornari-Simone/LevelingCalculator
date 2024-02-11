@@ -24,7 +24,7 @@ builder.Services.AddHttpClient<Character.ClientHTTP.Abstraction.IClientHTTP, Cha
 {
     httpClient.BaseAddress = new Uri(builder.Configuration.GetSection("CharacterClientHTTP:BaseAddress").Value);
 });
-builder.Services.AddHttpClient<Resource.ClientHTTP.Abstraction.IClientHTTP, Resource.ClientHTTP.ClientHTTP>("CharacterClientHTTP", httpClient =>
+builder.Services.AddHttpClient<Resource.ClientHTTP.Abstraction.IClientHTTP, Resource.ClientHTTP.ClientHTTP>("ResourceClientHTTP", httpClient =>
 {
     httpClient.BaseAddress = new Uri(builder.Configuration.GetSection("ResourceClientHTTP:BaseAddress").Value);
 });
